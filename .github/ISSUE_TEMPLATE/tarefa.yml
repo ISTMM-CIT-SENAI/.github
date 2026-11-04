@@ -1,0 +1,35 @@
+name: Tarefa
+description: Uma tarefa da equipe de tecnologia (funcionalidade, correção, melhoria técnica ou documentação).
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Escreva só o nível técnico. Documentos e dados de clientes ficam nos ambientes definidos em cada contrato.
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição
+      description: O que precisa ser feito e por quê.
+    validations:
+      required: true
+  - type: textarea
+    id: criterio
+    attributes:
+      label: Critério de aceite
+      description: Como saber que a tarefa está pronta. Sem critério de aceite, a tarefa não entra em "A fazer".
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo
+      options:
+        - Funcionalidade
+        - Correção
+        - Melhoria técnica
+        - Documentação
+    validations:
+      required: true
